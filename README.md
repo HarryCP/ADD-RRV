@@ -3,7 +3,7 @@ A novel sampleing-based motion planning algorithm integrate ADD-RRT,  RRV,  modi
 
 Demonstrations are implemented in Matlab, including Bug Trap scenario, Long Jaggy Passage scenario and Planar Manipulator Scenario.
 
-Revelant codes are only used for presentation temporarily, and more user-friendly improvemwnts will be made in the fiture.
+Revelant codes are only used for presentation temporarily, and more user-friendly improvemwnts will be made in the future.
 
 All copyright reserved by Peng Cai.
 
