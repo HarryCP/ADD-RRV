@@ -1,0 +1,45 @@
+function PlotTraget(Target_state)
+    xt = Target_state(1);
+    yt = Target_state(2);
+    thetat = Target_state(3);
+
+    Transport = [ cos(thetat), -sin(thetat), 0, xt 
+                  sin(thetat),  cos(thetat), 0, yt 
+                            0,            0, 1,  0 
+                            0,            0, 0,  1];
+    %%                 
+    %绘制第一个矩形
+    pos1 = [ 1,  1, -1, -1, 1
+             1, -1, -1,  1, 1 
+             0,  0,  0,  0, 0
+             1,  1,  1,  1, 1 ];
+         
+   Pos1 = Transport * pos1;
+   
+   X1 = Pos1(1, :);
+   Y1 = Pos1(2, :);
+   
+   plot(X1, Y1, 'k', 'LineWidth', 5);
+   fill(X1, Y1, 'b');
+   hold on;
+   
+   %%                 
+    %绘制第二个矩形
+   pos2 = [ 1,  1, -1, -1, 1
+             1, -1, -1,  1, 1 
+             0,  0,  0,  0, 0
+             1,  1,  1,  1, 1 ];
+         
+   Pos2 = Transport * pos2;
+   
+   X2 = Pos2(1, :);
+   Y2 = Pos2(2, :);
+   
+   plot(X2, Y2, 'k', 'LineWidth', 5);
+   fill(X2, Y2, 'b');
+   hold on;
+   
+   
+    
+
+end
