@@ -3,44 +3,44 @@
 % 01/29/2021
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%Ã¿´ÎÍØÕ¹¶¼½«Åö×²±ß½çĞÅÏ¢¼ÇÂ¼ÏÂÀ´£¬
-%Èç¹ûÔÚ±ß½ç¹¹ĞÍ¸½½üËÑË÷µ½µÄÒÑÌí¼ÓµÄÅö×²µãÊıÁ¿Ğ¡ÓÚÏÂ½ç£»
-%±íÃ÷´ËÇøÓò»¹Ã»ÓĞ±»ÍêÈ«Ì½Ë÷£¬
-%Òò´ËÀûÓÃ»ù´¡µÄRRVÀ´ÔÚÍØÕ¹£¬
-%Ö÷ÒªÊÇÀûÓÃÁËRRVÔÚÑ°ÕÒÕ­Í¨µÀÈë¿ÚºÍÔÚÕ­Í¨µÀÀïµÄÓÅÊÆ£»
-%µ«ÊÇµ¥´¿µÄRRVĞèÒª½øĞĞ´óÁ¿µÄËæ»ú²ÉÑùºÍÅö×²¼ì²â£¬¼ÆËãÁ¿´ó£¬
-%Òò´Ëµ±ÔÚ±ß½ç¹¹ĞÍ¸½½üËÑ¼¯µ½×ã¹»µÄÅö×²µãĞÅÏ¢Ê±£¬
-%ÀûÓÃÅö×²µãÖ¸µ¼ÍØÕ¹£¬Í¬Ê±ÄÜ¹»·ÀÖ¹ÍØÕ¹ÏİÈë·ÇÍ¹ÕÏ°­ÎïÖĞ
+%æ¯æ¬¡æ‹“å±•éƒ½å°†ç¢°æ’è¾¹ç•Œä¿¡æ¯è®°å½•ä¸‹æ¥ï¼Œ
+%å¦‚æœåœ¨è¾¹ç•Œæ„å‹é™„è¿‘æœç´¢åˆ°çš„å·²æ·»åŠ çš„ç¢°æ’ç‚¹æ•°é‡å°äºä¸‹ç•Œï¼›
+%è¡¨æ˜æ­¤åŒºåŸŸè¿˜æ²¡æœ‰è¢«å®Œå…¨æ¢ç´¢ï¼Œ
+%å› æ­¤åˆ©ç”¨åŸºç¡€çš„RRVæ¥åœ¨æ‹“å±•ï¼Œ
+%ä¸»è¦æ˜¯åˆ©ç”¨äº†RRVåœ¨å¯»æ‰¾çª„é€šé“å…¥å£å’Œåœ¨çª„é€šé“é‡Œçš„ä¼˜åŠ¿ï¼›
+%ä½†æ˜¯å•çº¯çš„RRVéœ€è¦è¿›è¡Œå¤§é‡çš„éšæœºé‡‡æ ·å’Œç¢°æ’æ£€æµ‹ï¼Œè®¡ç®—é‡å¤§ï¼Œ
+%å› æ­¤å½“åœ¨è¾¹ç•Œæ„å‹é™„è¿‘æœé›†åˆ°è¶³å¤Ÿçš„ç¢°æ’ç‚¹ä¿¡æ¯æ—¶ï¼Œ
+%åˆ©ç”¨ç¢°æ’ç‚¹æŒ‡å¯¼æ‹“å±•ï¼ŒåŒæ—¶èƒ½å¤Ÿé˜²æ­¢æ‹“å±•é™·å…¥éå‡¸éšœç¢ç‰©ä¸­
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % function Result = Main()
-% µØÍ¼Îª¾â³İĞÎ
+% åœ°å›¾ä¸ºé”¯é½¿å½¢
 clear
 clc
 
-addpath('~\Long Passage\Supply Tools\Supply Tools\×÷Í¼');
-addpath('~\Long Passage\Supply Tools\Supply Tools\GJK Algorithm');
-addpath('~\Long Passage\Supply Tools\Supply Tools\Transport');
-%¸ù¾İÊµ¼ÊÂ·¾¶ĞŞ¸Ä
+addpath('../Supply Tools/ä½œå›¾');
+addpath('../Supply Tools/GJK Algorithm');
+addpath('../Supply Tools/Transport');
+%æ ¹æ®å®é™…è·¯å¾„ä¿®æ”¹
 
-%% ³õÊ¼Ìõ¼şºÍ²ÎÊıÉèÖÃ
+%% åˆå§‹æ¡ä»¶å’Œå‚æ•°è®¾ç½®
 Boundary = [   0,  12;
                0, 8.5; 
              -pi,  pi];
-% %µØÍ¼±ß½ç
+% %åœ°å›¾è¾¹ç•Œ
 
-Node_init = [1, 5, pi/2]';   %³õÊ¼Î»ÖÃ
-Node_goal = [11, 5, pi/2]';   %Ä¿±êÎ»ÖÃ
+Node_init = [1, 5, pi/2]';   %åˆå§‹ä½ç½®
+Node_goal = [11, 5, pi/2]';   %ç›®æ ‡ä½ç½®
 
-delta = 0.7;        %»úÆ÷ÈËµÄ´óĞ¡1, 0.7
+delta = 0.7;        %æœºå™¨äººçš„å¤§å°1, 0.7
 
-Robot_size = ShapeToPoint([0, 0]', delta*0.5, delta*0.1);   %»úÆ÷ÈËÔÚÔ­µãÊ±µÄ×´Ì¬
+Robot_size = ShapeToPoint([0, 0]', delta*0.5, delta*0.1);   %æœºå™¨äººåœ¨åŸç‚¹æ—¶çš„çŠ¶æ€
 
-Weight = diag([1, 1, 1]); % ÓÃÓÚ0.7´óĞ¡ÏÂµÄÈ¨ÖØ diag([1, 1, 0.5]);
+Weight = diag([1, 1, 1]); % ç”¨äº0.7å¤§å°ä¸‹çš„æƒé‡ diag([1, 1, 0.5]);
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Obstacle = struct;  %ÕÏ°­Îï²ÎÊı
+Obstacle = struct;  %éšœç¢ç‰©å‚æ•°
 Obstacle.NO1 = [2, 2,   3, 4, 4, 2 
                 0, 3, 4.7, 3, 0, 0];
 
@@ -69,73 +69,73 @@ Obstacle.NO9 = [   9,   9,  10,  10,   9
                  8.5, 5.5, 3.8, 8.5, 8.5];
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%ÆäËû²ÎÊı
-Max_iter = 1*10^5;                      %×î´óµü´ú´ÎÊı
-Step = 0.1;                             %»úÆ÷ÈËÃ¿Ò»²½²½³¤
-Error_goal = 0.01;                      %ÔÊĞíÎó²î
+%å…¶ä»–å‚æ•°
+Max_iter = 1*10^5;                      %æœ€å¤§è¿­ä»£æ¬¡æ•°
+Step = 0.1;                             %æœºå™¨äººæ¯ä¸€æ­¥æ­¥é•¿
+Error_goal = 0.01;                      %å…è®¸è¯¯å·®
 
-P_sample = 0.3;                         %ÒÔÄ¿±êµãÎª²ÉÑùµãµÄ¸ÅÂÊ
-P_belif = 0.60;                         %ÖÃĞÅÇø¼ä·¶Î§£¬ÔÙ[0, 1]ÄÚÑ¡È¡
-P_bridge = 0.8;                         %ÀûÓÃPCAÆ«ÖÃÇÅ²âµÄ¸ÅÂÊ  0.8
+P_sample = 0.3;                         %ä»¥ç›®æ ‡ç‚¹ä¸ºé‡‡æ ·ç‚¹çš„æ¦‚ç‡
+P_belif = 0.60;                         %ç½®ä¿¡åŒºé—´èŒƒå›´ï¼Œå†[0, 1]å†…é€‰å–
+P_bridge = 0.8;                         %åˆ©ç”¨PCAåç½®æ¡¥æµ‹çš„æ¦‚ç‡  0.8
 
-Radius = 5*Step;                        %ËÑË÷°ë¾¶
+Radius = 5*Step;                        %æœç´¢åŠå¾„
 
-Radius_ADDRRT = 30*Step;                %ADD-RRT³õÊ¼°ë¾¶ 30
-alpha = 0.05;                           %ADD-RRT×ÔÊÊÓ¦ÏµÊı
+Radius_ADDRRT = 30*Step;                %ADD-RRTåˆå§‹åŠå¾„ 30
+alpha = 0.05;                           %ADD-RRTè‡ªé€‚åº”ç³»æ•°
 
-Num_obstacle_limit = 100;                        %ÓÃÓÚÅĞ¶ÏÈë¿Ú´¦µÄÅö×²µãÊÇ·ñ×ã¹»·á¸»,100
-Num_max_bridge_test = 20;               %×î´óÇÅ²âÊÔ´ÎÊı
+Num_obstacle_limit = 100;                        %ç”¨äºåˆ¤æ–­å…¥å£å¤„çš„ç¢°æ’ç‚¹æ˜¯å¦è¶³å¤Ÿä¸°å¯Œ,100
+Num_max_bridge_test = 20;               %æœ€å¤§æ¡¥æµ‹è¯•æ¬¡æ•°
 
-Num_collision_test = 0;                         %Åö×²¼ì²â´ÎÊı
-Num_collision_points = 0;                       %Óöµ½µÄÅö×²µã
-Num_entrance_points = 0;                        %¼ì²âµ½µÄÈë¿Úµã
-Num_narrow_points = 0;                          %±íÊ¾ÔÚÕ­Í¨µÀÖĞµÄµã
-Num_PCA_compute_1 = 0;                          %RRVÖĞÀûÓÃPCA·ÖÎöµÄ´ÎÊı
-Num_PCA_compute_2 = 0;                          %ÀûÓÃ±ß½çµã½øĞĞPCA·ÖÎöµÄ´ÎÊı
+Num_collision_test = 0;                         %ç¢°æ’æ£€æµ‹æ¬¡æ•°
+Num_collision_points = 0;                       %é‡åˆ°çš„ç¢°æ’ç‚¹
+Num_entrance_points = 0;                        %æ£€æµ‹åˆ°çš„å…¥å£ç‚¹
+Num_narrow_points = 0;                          %è¡¨ç¤ºåœ¨çª„é€šé“ä¸­çš„ç‚¹
+Num_PCA_compute_1 = 0;                          %RRVä¸­åˆ©ç”¨PCAåˆ†æçš„æ¬¡æ•°
+Num_PCA_compute_2 = 0;                          %åˆ©ç”¨è¾¹ç•Œç‚¹è¿›è¡ŒPCAåˆ†æçš„æ¬¡æ•°
 
-%% ´´½¨Ò»¿ÃÊ÷
+%% åˆ›å»ºä¸€æ£µæ ‘
 Tree = struct;
 Num_node = 1*10^4;
 Dim = 3;
-Tree.Node = zeros(Dim, Num_node );                                        	%±íÊ¾½Úµã
-Tree.Cost = zeros(1, Num_node);                                             %±íÊ¾´ÓÉÏÒ»¸ö½Úµãµ½µ±Ç°½ÚµãµÄ´ú¼Û
-Tree.Parent = zeros(1, Num_node, 'int32');                                  %¼ÇÂ¼½ÚµãµÄ¸¸½ÚµãË÷Òı
-Tree.Children = zeros(Num_node, Num_node, 'int32');                         %¼ÇÂ¼Ã¿¸ö½ÚµãÏÂµÄ×Ó½ÚµãË÷Òı
-Tree.Children_num = zeros(1, Num_node, 'int32');                            %¼ÇÂ¼Ã¿¸ö½ÚµãÏÂµÄ×Ó½ÚµãÊıÁ¿
-Tree.Type = zeros(1, Num_node);                                             %¼ÇÂ¼Ã¿¸öµãµÄÀàĞÍ:0,ÆÕÍ¨¹¹ĞÍ£»1Èë¿Ú¹¹ĞÍ£»2ÑØ±ß½ç¹¹ĞÍ£»3Õ­Í¨µÀÄÚ¹¹ĞÍ£»4Í¨¹ıÇÅ²âÊÔµÄ¹¹ĞÍ 
-Tree.ADD_Radius = 1./zeros(1, Num_node);                                    	%¼ÇÂ¼Ã¿¸ö½ÚµãµÄ¶¯Ì¬°ë¾¶
+Tree.Node = zeros(Dim, Num_node );                                        	%è¡¨ç¤ºèŠ‚ç‚¹
+Tree.Cost = zeros(1, Num_node);                                             %è¡¨ç¤ºä»ä¸Šä¸€ä¸ªèŠ‚ç‚¹åˆ°å½“å‰èŠ‚ç‚¹çš„ä»£ä»·
+Tree.Parent = zeros(1, Num_node, 'int32');                                  %è®°å½•èŠ‚ç‚¹çš„çˆ¶èŠ‚ç‚¹ç´¢å¼•
+Tree.Children = zeros(Num_node, Num_node, 'int32');                         %è®°å½•æ¯ä¸ªèŠ‚ç‚¹ä¸‹çš„å­èŠ‚ç‚¹ç´¢å¼•
+Tree.Children_num = zeros(1, Num_node, 'int32');                            %è®°å½•æ¯ä¸ªèŠ‚ç‚¹ä¸‹çš„å­èŠ‚ç‚¹æ•°é‡
+Tree.Type = zeros(1, Num_node);                                             %è®°å½•æ¯ä¸ªç‚¹çš„ç±»å‹:0,æ™®é€šæ„å‹ï¼›1å…¥å£æ„å‹ï¼›2æ²¿è¾¹ç•Œæ„å‹ï¼›3çª„é€šé“å†…æ„å‹ï¼›4é€šè¿‡æ¡¥æµ‹è¯•çš„æ„å‹ 
+Tree.ADD_Radius = 1./zeros(1, Num_node);                                    	%è®°å½•æ¯ä¸ªèŠ‚ç‚¹çš„åŠ¨æ€åŠå¾„
 
 Tree.Node(:, 1) = Node_init;
 Tree.ADD_Radius(:, 1) = +inf;
 
-Node_added_index = 2;                               %µ±Ç°Ìí¼ÓµÄµãµÄ±àºÅ
+Node_added_index = 2;                               %å½“å‰æ·»åŠ çš„ç‚¹çš„ç¼–å·
 
-Collision_boundary_set = [];            %ÓÃÓÚ¼ÇÂ¼·¢ÉúÅö×²±ß½çµã
-Entrance_set = [];                      %ÓÃÓÚ¼ÇÂ¼¼ì²âµ½µÄÈë¿Úµã
-Entrance_flag = [];                     %ÓÃÓÚ¼ÇÂ¼ÕÒµ½µÄÈë¿ÚÊÇ·ñÒÑ¾­±»·ÃÎÊ£¬0±íÊ¾Î´·ÃÎÊ£¬1±íÊ¾·ÃÎÊ
-Narrow_set = [];                        %±íÊ¾ÔÚÕ­Í¨µÀÖĞµÄµã
+Collision_boundary_set = [];            %ç”¨äºè®°å½•å‘ç”Ÿç¢°æ’è¾¹ç•Œç‚¹
+Entrance_set = [];                      %ç”¨äºè®°å½•æ£€æµ‹åˆ°çš„å…¥å£ç‚¹
+Entrance_flag = [];                     %ç”¨äºè®°å½•æ‰¾åˆ°çš„å…¥å£æ˜¯å¦å·²ç»è¢«è®¿é—®ï¼Œ0è¡¨ç¤ºæœªè®¿é—®ï¼Œ1è¡¨ç¤ºè®¿é—®
+Narrow_set = [];                        %è¡¨ç¤ºåœ¨çª„é€šé“ä¸­çš„ç‚¹
 
-Success_num = 0;                        %±íÊ¾³É¹¦ÕÒµ½Â·¾¶µÄ´ÎÊı
-Success = zeros(2, Num_node);           %±íÊ¾ËùÕÒµ½µÄÂ·¾¶µÄ×îºóÒ»¸ö½ÚµãµÄË÷ÒıºÍ¾àÀë
+Success_num = 0;                        %è¡¨ç¤ºæˆåŠŸæ‰¾åˆ°è·¯å¾„çš„æ¬¡æ•°
+Success = zeros(2, Num_node);           %è¡¨ç¤ºæ‰€æ‰¾åˆ°çš„è·¯å¾„çš„æœ€åä¸€ä¸ªèŠ‚ç‚¹çš„ç´¢å¼•å’Œè·ç¦»
 
 rng('shuffle');
 
 tic;
-% ¿ªÊ¼¼ÆÊ±
+% å¼€å§‹è®¡æ—¶
 
 for Iter_num = 1:Max_iter
 
     if(mod(Iter_num, 100) == 0)
-        disp([num2str(Iter_num) ' ´Îµü´ú£¬Éú³É ' num2str(Node_added_index-1) ' ¸ö½Úµã£¬»¨·Ñ ' num2str(toc) ' s']);
+        disp([num2str(Iter_num) ' æ¬¡è¿­ä»£ï¼Œç”Ÿæˆ ' num2str(Node_added_index-1) ' ä¸ªèŠ‚ç‚¹ï¼ŒèŠ±è´¹ ' num2str(toc) ' s']);
     end
     
     
     while true
         Node_rand = RandomSample( P_sample, Boundary, Node_goal );
-        %Ëæ»úÈöµã    
+        %éšæœºæ’’ç‚¹    
     
         [Node_nearest_index, Dist_min] = Nearest(Tree, Node_rand, Node_added_index, Weight);
-        %Ñ°ÕÒ×î½üµÄ½Úµã
+        %å¯»æ‰¾æœ€è¿‘çš„èŠ‚ç‚¹
         
         if Distance(Tree.Node(:, Node_nearest_index), Node_rand, Weight) < Tree.ADD_Radius(:, Node_nearest_index)
             break;
@@ -145,14 +145,14 @@ for Iter_num = 1:Max_iter
     From_index = Node_nearest_index;
     
 	Num_extend = 1; 
-    Num_extand_max = 1; %±íÊ¾×î´óÍØÕ¹²½Êı:1/+inf
+    Num_extand_max = 1; %è¡¨ç¤ºæœ€å¤§æ‹“å±•æ­¥æ•°:1/+inf
     
     while true
         [Node, Cost, Judge, Type_steer, State_collision, Num_collision_test] = ...
                 Steer(Tree, From_index, Node_rand, Step, Robot_size, Boundary, Obstacle, Num_collision_test, Weight);
-     	%Type_steer = 1, Ç°½øÒ»²½
-        %Type_steer = 2£¬µ½´ï²ÉÑùµã
-        %Type_steer = 3, ·¢ÉúÅö×²
+     	%Type_steer = 1, å‰è¿›ä¸€æ­¥
+        %Type_steer = 2ï¼Œåˆ°è¾¾é‡‡æ ·ç‚¹
+        %Type_steer = 3, å‘ç”Ÿç¢°æ’
         
         if Judge == 0
             Tree.Node(:, Node_added_index) = Node;
@@ -163,10 +163,10 @@ for Iter_num = 1:Max_iter
             Tree.Type(:, Node_added_index) = 0;
             Tree.ADD_Radius(Node_added_index) = +inf;
             
-            Tree.ADD_Radius(From_index) = (1 + alpha) *  Tree.ADD_Radius(From_index);   %³É¹¦ÍØÕ¹£¬¸¸½Úµã°ë¾¶À©Õ¹              
+            Tree.ADD_Radius(From_index) = (1 + alpha) *  Tree.ADD_Radius(From_index);   %æˆåŠŸæ‹“å±•ï¼Œçˆ¶èŠ‚ç‚¹åŠå¾„æ‰©å±•              
         
             Tree.Children_num(Node_added_index) = 0;
-            Tree.Children(1, Node_added_index) = 0; %¶Ô×ÔÉíµÄ×Ó½ÚµãÇé¿ö³õÊ¼»¯
+            Tree.Children(1, Node_added_index) = 0; %å¯¹è‡ªèº«çš„å­èŠ‚ç‚¹æƒ…å†µåˆå§‹åŒ–
         
             Node_added_index = Node_added_index + 1;
         
@@ -177,7 +177,7 @@ for Iter_num = 1:Max_iter
                 Success(1, Success_num) = Node_added_index - 1;
                 Success(2, Success_num) = Dist_temp;
             
-                disp(['µÚ' num2str(Success_num) '´Î³É¹¦ÕÒµ½µÚ' num2str(Success_num) 'Â·¾¶£¬Ğè ' num2str(toc) ' s']);
+                disp(['ç¬¬' num2str(Success_num) 'æ¬¡æˆåŠŸæ‰¾åˆ°ç¬¬' num2str(Success_num) 'è·¯å¾„ï¼Œéœ€ ' num2str(toc) ' s']);
                 break;
             end
         
@@ -189,13 +189,13 @@ for Iter_num = 1:Max_iter
                     Tree.ADD_Radius(From_index) = (1 - alpha) * Tree.ADD_Radius(From_index);
                 end
             end  
-            %ĞŞ¸Ä¶¯Ì¬Óò
+            %ä¿®æ”¹åŠ¨æ€åŸŸ
             
             [Collision_boundary_set, Num_collision_points, IsSuccessAdd] = AddPoint(Collision_boundary_set, State_collision, Num_collision_points, Weight, Error_goal);
             break;
         end
         
-        if  Num_extend >= Num_extand_max || Type_steer == 2    %ÓÃÀ´¿ØÖÆÍØÕ¹²½³¤
+        if  Num_extend >= Num_extand_max || Type_steer == 2    %ç”¨æ¥æ§åˆ¶æ‹“å±•æ­¥é•¿
             break
         else
             From_index = Node_added_index - 1;
@@ -211,51 +211,51 @@ for Iter_num = 1:Max_iter
     
 %     continue
     
-    %% ÏÂÃæ¿ªÊ¼ÀûÓÃ»ñÈ¡µÄ¹¹ĞÍ¿Õ¼äĞÅÏ¢½øĞĞÍØÕ¹
-    if Type_steer ~= 3  %Èç¹û²»·¢ÉúÅö×²£¬ÔòÏÂÁĞ²½Öè²»¼ÌĞø
+    %% ä¸‹é¢å¼€å§‹åˆ©ç”¨è·å–çš„æ„å‹ç©ºé—´ä¿¡æ¯è¿›è¡Œæ‹“å±•
+    if Type_steer ~= 3  %å¦‚æœä¸å‘ç”Ÿç¢°æ’ï¼Œåˆ™ä¸‹åˆ—æ­¥éª¤ä¸ç»§ç»­
         continue
     end
     
     Type_point = 0;
-    %±íÊ¾¹Ø¼ü¹¹ĞÍµãÀàĞÍ£º
-    %0 ±íÊ¾³õÊ¼»¯£»
-    %1 ±íÊ¾PCA·ÖÎöºóÑØ×Å±ß½çÍØÕ¹
-    %2 ±íÊ¾PCA·ÖÎöºóÕÒµ½µÄ¿ÉÄÜÈë¿Ú
-    %3 ±íÊ¾PCA·ÖÎöºóÕÒµ½µÄÕ­Í¨µÀ
+    %è¡¨ç¤ºå…³é”®æ„å‹ç‚¹ç±»å‹ï¼š
+    %0 è¡¨ç¤ºåˆå§‹åŒ–ï¼›
+    %1 è¡¨ç¤ºPCAåˆ†æåæ²¿ç€è¾¹ç•Œæ‹“å±•
+    %2 è¡¨ç¤ºPCAåˆ†æåæ‰¾åˆ°çš„å¯èƒ½å…¥å£
+    %3 è¡¨ç¤ºPCAåˆ†æåæ‰¾åˆ°çš„çª„é€šé“
     
-    Flag_new_entrance = 0;  %±íÊ¾ÊÇ·ñÕÒµ½ĞÂµÄÈë¿Úµã£º0±íÊ¾·ñ£»1±íÊ¾ÊÇ
+    Flag_new_entrance = 0;  %è¡¨ç¤ºæ˜¯å¦æ‰¾åˆ°æ–°çš„å…¥å£ç‚¹ï¼š0è¡¨ç¤ºå¦ï¼›1è¡¨ç¤ºæ˜¯
     num_bridgetest = 1;
     
     Node_from = Tree.Node(:, From_index);
     Points_obstacle = Near(Collision_boundary_set, Num_collision_points, Node_from, Radius, Weight);
-    %ËÑ¼¯¸½½üµÄÅö×²¹¹ĞÍ   
+    %æœé›†é™„è¿‘çš„ç¢°æ’æ„å‹   
 	[~, Num_points_obstacle] = size(Points_obstacle);
     
     Node_rand = UnifyAttitude(Node_rand, Node_from);
-	%¸ù¾İÖĞĞÄµã¶Ô×ËÌ¬½øĞĞÍ³Ò»»¯ £¨ÏòNode_fromÍ³Ò»£©
+	%æ ¹æ®ä¸­å¿ƒç‚¹å¯¹å§¿æ€è¿›è¡Œç»Ÿä¸€åŒ– ï¼ˆå‘Node_fromç»Ÿä¸€ï¼‰
     
     Num_node_to = 0;    
     if Num_points_obstacle < Dim+1
-        %Èç¹û½Ó´¥¹¹ĞÍ£¨in-contact free configuration£©¸½½üµÄ±ß½ç¹¹ĞÍ£¨obstacle boundary configuration£©²»¹»·á¸» 
+        %å¦‚æœæ¥è§¦æ„å‹ï¼ˆin-contact free configurationï¼‰é™„è¿‘çš„è¾¹ç•Œæ„å‹ï¼ˆobstacle boundary configurationï¼‰ä¸å¤Ÿä¸°å¯Œ 
         
         %%%%!!!!!!!!!!!!!!!!!!!!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-        %¶à´Î½øĞĞÇÅ²âÊÔ
+        %å¤šæ¬¡è¿›è¡Œæ¡¥æµ‹è¯•
         
         while num_bridgetest > 0
             num_bridgetest = num_bridgetest - 1;
         
-            %%%%%%%%%%%%%%%%%%%%%%%%%%%Ê×ÏÈ½øĞĞÇÅ²âÊÔ%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%é¦–å…ˆè¿›è¡Œæ¡¥æµ‹è¯•%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
             Bridge_point_1 = State_collision;
-            %ÇÅµÚÒ»¸öÖ§µãÎªÏàÓ¦µÄÅö×²µã
+            %æ¡¥ç¬¬ä¸€ä¸ªæ”¯ç‚¹ä¸ºç›¸åº”çš„ç¢°æ’ç‚¹
             Bridge_vect = 2*rand(Dim, 1) - 1; 
     %         Bridge_vect = BridgeTest(Node_rand - Node_from, Dim, Weight);
-            %ÇÅ²âÊÔ·½Ïò
-            if rand < P_bridge %Ò»¶¨¸ÅÂÊÏÂ£¬ÀûÓÃPCAÆ«ÖÃÇÅ²âÊÔ·½Ïò
+            %æ¡¥æµ‹è¯•æ–¹å‘
+            if rand < P_bridge %ä¸€å®šæ¦‚ç‡ä¸‹ï¼Œåˆ©ç”¨PCAåç½®æ¡¥æµ‹è¯•æ–¹å‘
                 Points_free = Near(Tree.Node(:, 1:Node_added_index - 1), Node_added_index - 1, Node_from, Radius, Weight);
-                %ËÑ¼¯¸½½üµÄ×ÔÓÉ¹¹ĞÍ
+                %æœé›†é™„è¿‘çš„è‡ªç”±æ„å‹
                 [~, Num_points_free] = size(Points_free);
 
-                if Num_points_free >= Dim+1      %PCAÆ«ÖÃÇÅ²âÊÔ·½Ïò
+                if Num_points_free >= Dim+1      %PCAåç½®æ¡¥æµ‹è¯•æ–¹å‘
                     [Coeff_free, Score_free, Latent_free, Tsquared_free, Explained_free, Mu_free] = pca((Weight*Points_free)');
                     Num_PCA_compute_2 = Num_PCA_compute_2 + 1;
 
@@ -264,27 +264,27 @@ for Iter_num = 1:Max_iter
             end
 
             Bridge_length = Radius + (Radius/3)*randn;          
-            %ÇÅ²âÊÔ³¤¶È
+            %æ¡¥æµ‹è¯•é•¿åº¦
             Bridge_point_2 = State_collision + Bridge_vect*Bridge_length/Distance(Bridge_vect, zeros(Dim, 1), Weight);
-            %ÇÅµÚ¶ş¸öÖ§µã
+            %æ¡¥ç¬¬äºŒä¸ªæ”¯ç‚¹
             Middle_point = (Bridge_point_1 + Bridge_point_2) /2;
-            %ÇÅÖĞµã
+            %æ¡¥ä¸­ç‚¹
 
             Num_collision_test = Num_collision_test + 1;
-            if IsCollision(Bridge_point_2, Robot_size, Boundary, Obstacle) ~= 0     %ÇÅÁíÒ»¸öµã·¢ÉúÅö×²
+            if IsCollision(Bridge_point_2, Robot_size, Boundary, Obstacle) ~= 0     %æ¡¥å¦ä¸€ä¸ªç‚¹å‘ç”Ÿç¢°æ’
                 Num_collision_test = Num_collision_test + 1;
-                if IsCollision(Middle_point, Robot_size, Boundary, Obstacle) == 0   %ÇÅÖĞµãÎŞÅö×²
+                if IsCollision(Middle_point, Robot_size, Boundary, Obstacle) == 0   %æ¡¥ä¸­ç‚¹æ— ç¢°æ’
                     [Entrance_set, Num_entrance_points, IsSucceedAdd] = AddPoint(Entrance_set, Middle_point, Num_entrance_points, Weight, Error_goal);                
                     if IsSucceedAdd == 1
                         Entrance_flag(:, Num_entrance_points) = 0;               
-                        %¼ÇÂ¼¿ÉÄÜµÄÍ¨µÀÈë¿Ú
-                        Flag_new_entrance = 1;  %±íÊ¾³õ´ÎÇÅ²âÊÔÕÒµ½Èë¿Ú 
+                        %è®°å½•å¯èƒ½çš„é€šé“å…¥å£
+                        Flag_new_entrance = 1;  %è¡¨ç¤ºåˆæ¬¡æ¡¥æµ‹è¯•æ‰¾åˆ°å…¥å£ 
                         break
                     end               
                 end       
             end
 
-            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%µÚÒ»´ÎÇÅ²âÊÔ½áÊø%%%%%%%%%%%%%%%%%%%%%%
+            %%%%%%%%%%%%%%%%%%%%%%%%%%%%%ç¬¬ä¸€æ¬¡æ¡¥æµ‹è¯•ç»“æŸ%%%%%%%%%%%%%%%%%%%%%%
         
         end
        %%%%!!!!!!!!!!!!!!!!!!!!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
@@ -293,44 +293,44 @@ for Iter_num = 1:Max_iter
         if Num_points_obstacle <= Num_obstacle_limit
             Num_PCA_compute_1  = Num_PCA_compute_1 +1;
             Points_free = Near(Tree.Node(:, 1:Node_added_index - 1), Node_added_index - 1, Node_from, Radius, Weight);
-            %ËÑ¼¯¸½½üµÄ×ÔÓÉ¹¹ĞÍ
+            %æœé›†é™„è¿‘çš„è‡ªç”±æ„å‹
             [~, Num_points_free] = size(Points_free);
         
             [Coeff_obs, Score_obs, Latent_obs, Tsquared_obs, Explained_obs, Mu_obs] = pca((Weight*Points_obstacle)');
-            % CoeffÎªĞ­·½²î¾ØÕóµÄÌØĞÔÏòÁ¿¾ØÕó£¨ÁĞÏòÁ¿£©£¬±ä»»¾ØÕó
-            % ScoreÎª±ä»»ºóµÄµã,Score = (X-Mu) * Coeff.
-            % LatentÎª¸÷ÌØÕ÷ÏòÁ¿¶ÔÓ¦µÄÌØÕ÷Öµ£¬´Ó´óµ½Ğ¡ÅÅÁĞ
-            % ExplainedÃ¿Ò»¸öÖ÷³É·ÖµÄ¹±Ï×±È
-            % MuÎªX£¨Ô­Êı¾İ£©°´ÁĞµÄ¾ùÖµ
+            % Coeffä¸ºåæ–¹å·®çŸ©é˜µçš„ç‰¹æ€§å‘é‡çŸ©é˜µï¼ˆåˆ—å‘é‡ï¼‰ï¼Œå˜æ¢çŸ©é˜µ
+            % Scoreä¸ºå˜æ¢åçš„ç‚¹,Score = (X-Mu) * Coeff.
+            % Latentä¸ºå„ç‰¹å¾å‘é‡å¯¹åº”çš„ç‰¹å¾å€¼ï¼Œä»å¤§åˆ°å°æ’åˆ—
+            % Explainedæ¯ä¸€ä¸ªä¸»æˆåˆ†çš„è´¡çŒ®æ¯”
+            % Muä¸ºXï¼ˆåŸæ•°æ®ï¼‰æŒ‰åˆ—çš„å‡å€¼
             Num_PCA_compute_2 = Num_PCA_compute_2 + 1;
         
             [Points_free_in_ellipsoid, Judge_node_from_in_ellipsoid] = PointsAnalyse(Coeff_obs, Latent_obs, Mu_obs, Points_free, Num_points_free, Dim, Node_from, P_belif, Weight);
-            %¸ù¾İPCA¶ÔÕÏ°­ÎïÖĞµÄµãµÄ·ÖÎö½á¹û£¬¶ÔÎŞÅö×²µÄµã½øĞĞÔÙ·ÖÎö
+            %æ ¹æ®PCAå¯¹éšœç¢ç‰©ä¸­çš„ç‚¹çš„åˆ†æç»“æœï¼Œå¯¹æ— ç¢°æ’çš„ç‚¹è¿›è¡Œå†åˆ†æ
             
             if isempty(Points_free_in_ellipsoid)
-                %ÕÏ°­Îïµã°üÂçÇøÓòÄÚ²»°üº¬ÎŞÅö×²µã
-                %Node_fromÔÚÍ¹ÕÏ°­Îï±ß½ç
+                %éšœç¢ç‰©ç‚¹åŒ…ç»œåŒºåŸŸå†…ä¸åŒ…å«æ— ç¢°æ’ç‚¹
+                %Node_fromåœ¨å‡¸éšœç¢ç‰©è¾¹ç•Œ
                 
                 Num_node_to = 1;
                 Node_to = NodeProject(Node_from, Node_rand, Coeff_obs, Latent_obs);
-                %¶ÔËæ»ú½ÚµãÔÚ×îÓÅÍØÕ¹·½ÏòÉÏ½øĞĞÍ¶Ó°
-                Type_point = 1;  %±íÊ¾PCA·ÖÎöºóÑØ×Å±ß½çÍØÕ¹
+                %å¯¹éšæœºèŠ‚ç‚¹åœ¨æœ€ä¼˜æ‹“å±•æ–¹å‘ä¸Šè¿›è¡ŒæŠ•å½±
+                Type_point = 1;  %è¡¨ç¤ºPCAåˆ†æåæ²¿ç€è¾¹ç•Œæ‹“å±•
 
                 if Num_points_obstacle <= Num_max_bridge_test
                     %%%%!!!!!!!!!!!!!!!!!!!!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-                    %¶à´Î½øĞĞÇÅ²âÊÔ
+                    %å¤šæ¬¡è¿›è¡Œæ¡¥æµ‹è¯•
                     while num_bridgetest > 0
                         num_bridgetest = num_bridgetest - 1;
 
-                    %%%%%%%%%%%%%%%%%%%%%%%%%%ÔÙ´Î½øĞĞÇÅ²âÊÔ%%%%%%%%%%%%%%%%%%%%%%%
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%å†æ¬¡è¿›è¡Œæ¡¥æµ‹è¯•%%%%%%%%%%%%%%%%%%%%%%%
                                        
                         Bridge_point_1 = State_collision;
-                        %ÇÅµÚÒ»¸öÖ§µãÎªÏàÓ¦µÄÅö×²µã
+                        %æ¡¥ç¬¬ä¸€ä¸ªæ”¯ç‚¹ä¸ºç›¸åº”çš„ç¢°æ’ç‚¹
                         Bridge_vect = 2*rand(Dim,1) - 1;                            
     %                     Bridge_vect = BridgeTest(Node_rand - Node_from, Dim, Weight);
-                        %ÇÅ²âÊÔ·½Ïò
-                        if rand < P_bridge %Ò»¶¨¸ÅÂÊÏÂ£¬ÀûÓÃPCAÆ«ÖÃÇÅ²âÊÔ·½Ïò            
-                            if Num_points_free >= Dim+1      %PCAÆ«ÖÃÇÅ²âÊÔ·½Ïò
+                        %æ¡¥æµ‹è¯•æ–¹å‘
+                        if rand < P_bridge %ä¸€å®šæ¦‚ç‡ä¸‹ï¼Œåˆ©ç”¨PCAåç½®æ¡¥æµ‹è¯•æ–¹å‘            
+                            if Num_points_free >= Dim+1      %PCAåç½®æ¡¥æµ‹è¯•æ–¹å‘
                                 [Coeff_free, Score_free, Latent_free, Tsquared_free, Explained_free, Mu_free] = pca((Weight*Points_free)');
                                 Num_PCA_compute_2 = Num_PCA_compute_2 + 1;                
                                 Bridge_vect = BridgeProject(Bridge_vect, Coeff_free, Latent_free, Dim);
@@ -338,44 +338,44 @@ for Iter_num = 1:Max_iter
                         end
 
                         Bridge_length = Radius + (Radius/3)*randn;          
-                        %ÇÅ²âÊÔ³¤¶È
+                        %æ¡¥æµ‹è¯•é•¿åº¦
                         Bridge_point_2 = State_collision + Bridge_vect*Bridge_length/Distance(Bridge_vect, zeros(Dim, 1), Weight);
-                        %ÇÅµÚ¶ş¸öÖ§µã
+                        %æ¡¥ç¬¬äºŒä¸ªæ”¯ç‚¹
                         Middle_point = (Bridge_point_1 + Bridge_point_2) /2;
-                        %ÇÅÖĞµã
+                        %æ¡¥ä¸­ç‚¹
 
                         Num_collision_test = Num_collision_test + 1;
-                        if IsCollision(Bridge_point_2, Robot_size, Boundary, Obstacle) ~= 0     %ÇÅÁíÒ»¸öµã·¢ÉúÅö×²
+                        if IsCollision(Bridge_point_2, Robot_size, Boundary, Obstacle) ~= 0     %æ¡¥å¦ä¸€ä¸ªç‚¹å‘ç”Ÿç¢°æ’
                             Num_collision_test = Num_collision_test + 1;
-                            if IsCollision(Middle_point, Robot_size, Boundary, Obstacle) == 0   %ÇÅÖĞµãÎŞÅö×²
+                            if IsCollision(Middle_point, Robot_size, Boundary, Obstacle) == 0   %æ¡¥ä¸­ç‚¹æ— ç¢°æ’
                                 [Entrance_set, Num_entrance_points, IsSucceedAdd] = AddPoint(Entrance_set, Middle_point, Num_entrance_points, Weight, Error_goal);                
                                 if IsSucceedAdd == 1
                                     Entrance_flag(:, Num_entrance_points) = 0;               
-                                    %¼ÇÂ¼¿ÉÄÜµÄÍ¨µÀÈë¿Ú
-                                    Flag_new_entrance = 1;  %±íÊ¾ÇÅ²âÊÔÕÒµ½Èë¿Ú
+                                    %è®°å½•å¯èƒ½çš„é€šé“å…¥å£
+                                    Flag_new_entrance = 1;  %è¡¨ç¤ºæ¡¥æµ‹è¯•æ‰¾åˆ°å…¥å£
                                     break
                                 end               
                             end            
                         end   
                     end
-                    %%%%%%%%%%%%%%%%%%%%%%%%%%µÚ¶ş´ÎÇÅ²âÊÔ½áÊø%%%%%%%%%%%%%%%%%%%%%%
+                    %%%%%%%%%%%%%%%%%%%%%%%%%%ç¬¬äºŒæ¬¡æ¡¥æµ‹è¯•ç»“æŸ%%%%%%%%%%%%%%%%%%%%%%
                 end
                 %%%%%%%%%%%%!!!!!!!!!!!%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                 
             else
                 
                 if Judge_node_from_in_ellipsoid == 0
-                    % Node_from¿ÉÄÜÔÚÕ­Í¨µÀÈë¿Ú´¦                    
+                    % Node_fromå¯èƒ½åœ¨çª„é€šé“å…¥å£å¤„                    
                     
-                    %%%%%%%Ìí¼ÓÈë¿Ú½Úµã%%%%%%%%%
+                    %%%%%%%æ·»åŠ å…¥å£èŠ‚ç‚¹%%%%%%%%%
                     [~, Num_temp] = size(Points_free_in_ellipsoid);
                     Points_center = sum(Points_free_in_ellipsoid, 2)/Num_temp;
                     
                     [Entrance_set, Num_entrance_points, IsSucceedAdd] = AddPoint(Entrance_set, Points_center, Num_entrance_points, Weight, Error_goal);                
                     if IsSucceedAdd == 1
                         Entrance_flag(:, Num_entrance_points) = 0;               
-                        %¼ÇÂ¼¿ÉÄÜµÄÍ¨µÀÈë¿Ú                   
-                        Flag_new_entrance = 1;  %±íÊ¾ÕÒµ½Èë¿Ú                      
+                        %è®°å½•å¯èƒ½çš„é€šé“å…¥å£                   
+                        Flag_new_entrance = 1;  %è¡¨ç¤ºæ‰¾åˆ°å…¥å£                      
                     end                   
                     
                     %%%%%%%%%%%%%%%%%%%%%%%%
@@ -385,26 +385,26 @@ for Iter_num = 1:Max_iter
                         Num_PCA_compute_2 = Num_PCA_compute_2 + 1;
                         Num_node_to = 1;
 
-                        Node_temp_goal = 100*(Node_rand - Node_from) + Node_from;    %½«Ä¿±êÑÓ³¤£¬Ê¹µÃÊ÷ÔÚÍ¨µÀÖĞ¾¡¿ÉÄÜÍØÕ¹
+                        Node_temp_goal = 100*(Node_rand - Node_from) + Node_from;    %å°†ç›®æ ‡å»¶é•¿ï¼Œä½¿å¾—æ ‘åœ¨é€šé“ä¸­å°½å¯èƒ½æ‹“å±•
                         Node_to = NodeProject(Node_from, Node_temp_goal, Coeff_free, Latent_free);
-                        %¶ÔËæ»ú½ÚµãÔÚ×îÓÅÍØÕ¹·½ÏòÉÏ½øĞĞÍ¶Ó°(×ÔÓÉ¿Õ¼äµÄÉìÕ¹·½Ïò)     
+                        %å¯¹éšæœºèŠ‚ç‚¹åœ¨æœ€ä¼˜æ‹“å±•æ–¹å‘ä¸Šè¿›è¡ŒæŠ•å½±(è‡ªç”±ç©ºé—´çš„ä¼¸å±•æ–¹å‘)     
 %                     end                          
                    	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
                     
-                    Type_point = 2;  %±íÊ¾PCA·ÖÎöºóÕÒµ½Èë¿Ú
+                    Type_point = 2;  %è¡¨ç¤ºPCAåˆ†æåæ‰¾åˆ°å…¥å£
 
                 else
-                    %Node_fromÔÚÕ­Í¨µÀÄÚ£¨»òÕßÔÚ·ÇÍ¹ÕÏ°­Îï´¦£©
-                    %È·¶¨ÍØÕ¹·½Ïò
+                    %Node_fromåœ¨çª„é€šé“å†…ï¼ˆæˆ–è€…åœ¨éå‡¸éšœç¢ç‰©å¤„ï¼‰
+                    %ç¡®å®šæ‹“å±•æ–¹å‘
 %                   	Node_parent = Tree.Node(:, Tree.Parent(From_index));
 %                     if (Weight*(Node_parent - Node_from))' * (Weight*(Node_rand - Node_from))  < 0
                         [Coeff_free, Score_free, Latent_free, Tsquared_free, Explained_free, Mu_free] = pca((Weight*Points_free)');
                         Num_PCA_compute_2 = Num_PCA_compute_2 + 1;
                         Num_node_to = 1;
                     
-                        Node_temp_goal = 100*(Node_rand - Node_from) + Node_from;    %½«Ä¿±êÑÓ³¤£¬Ê¹µÃÊ÷ÔÚÍ¨µÀÖĞ¾¡¿ÉÄÜÍØÕ¹
+                        Node_temp_goal = 100*(Node_rand - Node_from) + Node_from;    %å°†ç›®æ ‡å»¶é•¿ï¼Œä½¿å¾—æ ‘åœ¨é€šé“ä¸­å°½å¯èƒ½æ‹“å±•
                         Node_to = NodeProject(Node_from, Node_temp_goal, Coeff_free, Latent_free);
-                        Type_point = 3;  %±íÊ¾PCA·ÖÎöºó£¬ÔÚÍ¨µÀÄÚ
+                        Type_point = 3;  %è¡¨ç¤ºPCAåˆ†æåï¼Œåœ¨é€šé“å†…
 %                     end
                 end
             end
@@ -413,24 +413,24 @@ for Iter_num = 1:Max_iter
     
     %%
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %%%%%%%%%%%%%%%%%%%%%%ÏÂÃæ½øĞĞÊ÷µÄÉú³¤%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    %%%%ÏÈ¼ÇÂ¼³õÊ¼½Úµã£¬±ãÓÚ¶à´ÎÍØÕ¹
+    %%%%%%%%%%%%%%%%%%%%%%ä¸‹é¢è¿›è¡Œæ ‘çš„ç”Ÿé•¿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%å…ˆè®°å½•åˆå§‹èŠ‚ç‚¹ï¼Œä¾¿äºå¤šæ¬¡æ‹“å±•
     NODE_FROM = Node_from;
     FROM_INDEX = From_index;
        
-    %%%%Çé¿ö1£ºÈç¹ûÕÒµ½ÁËÈë¿Ú´¦µÄ½Úµã£¬ÏÈ¶ÔÈë¿Ú½Úµã½øĞĞÍØÕ¹
+    %%%%æƒ…å†µ1ï¼šå¦‚æœæ‰¾åˆ°äº†å…¥å£å¤„çš„èŠ‚ç‚¹ï¼Œå…ˆå¯¹å…¥å£èŠ‚ç‚¹è¿›è¡Œæ‹“å±•
     if Flag_new_entrance == 1
     	Node_from = NODE_FROM;
         From_index = FROM_INDEX;
         
         Num_extend = 1;
-        Num_extand_max = +inf;  %±íÊ¾×î´óÍØÕ¹²½Êı
+        Num_extand_max = +inf;  %è¡¨ç¤ºæœ€å¤§æ‹“å±•æ­¥æ•°
         while true
             [Node, Cost, Judge, Type_steer, State_collision, Num_collision_test] = ...
                     Steer(Tree, From_index, Entrance_set(:, Num_entrance_points), Step, Robot_size, Boundary, Obstacle, Num_collision_test, Weight);
-            %Type_steer = 1, Ç°½øÒ»²½
-            %Type_steer = 2£¬µ½´ï²ÉÑùµã
-            %Type_steer = 3, ·¢ÉúÅö×²
+            %Type_steer = 1, å‰è¿›ä¸€æ­¥
+            %Type_steer = 2ï¼Œåˆ°è¾¾é‡‡æ ·ç‚¹
+            %Type_steer = 3, å‘ç”Ÿç¢°æ’
         
             if Judge == 0
                 Tree.Node(:, Node_added_index) = Node;
@@ -444,7 +444,7 @@ for Iter_num = 1:Max_iter
                 Tree.Children_num(Node_added_index) = 0;
         
                 Tree.Children_num(Node_added_index) = 0;
-                Tree.Children(1, Node_added_index) = 0; %¶Ô×ÔÉíµÄ×Ó½ÚµãÇé¿ö³õÊ¼»¯
+                Tree.Children(1, Node_added_index) = 0; %å¯¹è‡ªèº«çš„å­èŠ‚ç‚¹æƒ…å†µåˆå§‹åŒ–
         
                 Node_added_index = Node_added_index + 1;
         
@@ -455,14 +455,14 @@ for Iter_num = 1:Max_iter
                     Success(1, Success_num) = Node_added_index - 1;
                     Success(2, Success_num) = Dist_temp;
             
-                    disp(['µÚ' num2str(Success_num) '´Î³É¹¦ÕÒµ½µÚ' num2str(Success_num) 'Â·¾¶£¬Ğè ' num2str(toc) ' s']);
+                    disp(['ç¬¬' num2str(Success_num) 'æ¬¡æˆåŠŸæ‰¾åˆ°ç¬¬' num2str(Success_num) 'è·¯å¾„ï¼Œéœ€ ' num2str(toc) ' s']);
                     break;
                 end
         
             else
                 [Collision_boundary_set, Num_collision_points, IsSuccessAdd] = AddPoint(Collision_boundary_set, State_collision, Num_collision_points, Weight, Error_goal);
                 
-                %Èç¹ûÅö×²¹¹ĞÍ¾ÍÊÇÄ¿±êÈë¿Ú¹¹ĞÍ£¬ÔòÄ¿±êÈë¿Ú¹¹ĞÍ±ê¼ÇÎªÒ»Ì½²â×´Ì¬
+                %å¦‚æœç¢°æ’æ„å‹å°±æ˜¯ç›®æ ‡å…¥å£æ„å‹ï¼Œåˆ™ç›®æ ‡å…¥å£æ„å‹æ ‡è®°ä¸ºä¸€æ¢æµ‹çŠ¶æ€
                 if Distance(Entrance_set(:, Num_entrance_points), State_collision, Weight) < Error_goal
                     Entrance_flag(:, Num_entrance_points) = 1;
                 end
@@ -471,12 +471,12 @@ for Iter_num = 1:Max_iter
             end
         
             if  Num_extend >= Num_extand_max || Type_steer == 2    
-                %ÓÃÀ´¿ØÖÆÍØÕ¹²½³¤, Ö±µ½µ½´ïÈë¿Ú²Å»áÍ£Ö¹
+                %ç”¨æ¥æ§åˆ¶æ‹“å±•æ­¥é•¿, ç›´åˆ°åˆ°è¾¾å…¥å£æ‰ä¼šåœæ­¢
                 Entrance_flag(:, Num_entrance_points) = 1;
-                %±íÊ¾Èë¿Ú¼¯ºÏÖĞ£¬´ËµãÒÑ¾­±»ÕÒµ½
+                %è¡¨ç¤ºå…¥å£é›†åˆä¸­ï¼Œæ­¤ç‚¹å·²ç»è¢«æ‰¾åˆ°
                 
                 Tree.Type(:, Node_added_index-1) = 1; 
-                %±íÊ¾Ê÷ÖĞ£¬ĞÂÌí¼ÓµÄµãÎªÈë¿Úµã
+                %è¡¨ç¤ºæ ‘ä¸­ï¼Œæ–°æ·»åŠ çš„ç‚¹ä¸ºå…¥å£ç‚¹
                 break
             else
                 From_index = Node_added_index - 1;
@@ -490,7 +490,7 @@ for Iter_num = 1:Max_iter
         end
         
     end
-    %%%%Çé¿ö2£ºÑØ×Å±ß½ç»òÕßÍ¨µÀÍØÕ¹Ò»¶¨²½Êı
+    %%%%æƒ…å†µ2ï¼šæ²¿ç€è¾¹ç•Œæˆ–è€…é€šé“æ‹“å±•ä¸€å®šæ­¥æ•°
     if Num_node_to == 1
     	Node_from = NODE_FROM;
         From_index = FROM_INDEX;
@@ -498,29 +498,29 @@ for Iter_num = 1:Max_iter
         Num_extend = 1;
         
         if  Type_point == 1 
-            %±íÊ¾ÑØ×Å±ß½çÍØÕ¹£¬»òÕß¸Õ½øÈëÍ¨µÀ
-            %Ôò×î´óÖ»ÍØÕ¹Ò»¶¨µÄ²½Êı£¬»òÕßµ½´ïÄ¿±êµã
+            %è¡¨ç¤ºæ²¿ç€è¾¹ç•Œæ‹“å±•ï¼Œæˆ–è€…åˆšè¿›å…¥é€šé“
+            %åˆ™æœ€å¤§åªæ‹“å±•ä¸€å®šçš„æ­¥æ•°ï¼Œæˆ–è€…åˆ°è¾¾ç›®æ ‡ç‚¹
             Num_extand_max = +1;% 20
-            Node_type = 2;      %±íÊ¾Ê÷ÖĞµãµÄÀàĞÍ
+            Node_type = 2;      %è¡¨ç¤ºæ ‘ä¸­ç‚¹çš„ç±»å‹
                        
         else
             if Type_point == 2
-                %±íÊ¾ÔÚÕ­Í¨µÀÄÚ£¬Ôò¾¡¿ÉÄÜÍØÕ¹£¬Ö±µ½·¢ÉúÅö×²
+                %è¡¨ç¤ºåœ¨çª„é€šé“å†…ï¼Œåˆ™å°½å¯èƒ½æ‹“å±•ï¼Œç›´åˆ°å‘ç”Ÿç¢°æ’
                 Num_extand_max = 20;    % 20
-                Node_type = 3;      %±íÊ¾Ê÷ÖĞµãµÄÀàĞÍ
-            else    % ¼´Type_point ==3
-            	%±íÊ¾ÔÚÕ­Í¨µÀÄÚ£¬Ôò¾¡¿ÉÄÜÍØÕ¹£¬Ö±µ½·¢ÉúÅö×²
+                Node_type = 3;      %è¡¨ç¤ºæ ‘ä¸­ç‚¹çš„ç±»å‹
+            else    % å³Type_point ==3
+            	%è¡¨ç¤ºåœ¨çª„é€šé“å†…ï¼Œåˆ™å°½å¯èƒ½æ‹“å±•ï¼Œç›´åˆ°å‘ç”Ÿç¢°æ’
                 Num_extand_max = 20;    % 20
-                Node_type = 3;      %±íÊ¾Ê÷ÖĞµãµÄÀàĞÍ
+                Node_type = 3;      %è¡¨ç¤ºæ ‘ä¸­ç‚¹çš„ç±»å‹
             end
         end
         
         while true
             [Node, Cost, Judge, Type_steer, State_collision, Num_collision_test] = ...
                     Steer(Tree, From_index, Node_to, Step, Robot_size, Boundary, Obstacle, Num_collision_test, Weight);
-            %Type_steer = 1, Ç°½øÒ»²½
-            %Type_steer = 2£¬µ½´ï²ÉÑùµã
-            %Type_steer = 3, ·¢ÉúÅö×²
+            %Type_steer = 1, å‰è¿›ä¸€æ­¥
+            %Type_steer = 2ï¼Œåˆ°è¾¾é‡‡æ ·ç‚¹
+            %Type_steer = 3, å‘ç”Ÿç¢°æ’
         
             if Judge == 0
                 Tree.Node(:, Node_added_index) = Node;
@@ -532,7 +532,7 @@ for Iter_num = 1:Max_iter
                 Tree.ADD_Radius(Node_added_index) = +inf;
         
                 Tree.Children_num(Node_added_index) = 0;
-                Tree.Children(1, Node_added_index) = 0; %¶Ô×ÔÉíµÄ×Ó½ÚµãÇé¿ö³õÊ¼»¯
+                Tree.Children(1, Node_added_index) = 0; %å¯¹è‡ªèº«çš„å­èŠ‚ç‚¹æƒ…å†µåˆå§‹åŒ–
         
                 Node_added_index = Node_added_index + 1;
         
@@ -543,7 +543,7 @@ for Iter_num = 1:Max_iter
                     Success(1, Success_num) = Node_added_index - 1;
                     Success(2, Success_num) = Dist_temp;
             
-                    disp(['µÚ' num2str(Success_num) '´Î³É¹¦ÕÒµ½µÚ' num2str(Success_num) 'Â·¾¶£¬Ğè ' num2str(toc) ' s']);
+                    disp(['ç¬¬' num2str(Success_num) 'æ¬¡æˆåŠŸæ‰¾åˆ°ç¬¬' num2str(Success_num) 'è·¯å¾„ï¼Œéœ€ ' num2str(toc) ' s']);
                     break;
                 end
         
@@ -553,7 +553,7 @@ for Iter_num = 1:Max_iter
             end
         
             if  Num_extend >= Num_extand_max || Type_steer == 2    
-                %ÓÃÀ´¿ØÖÆÍØÕ¹²½³¤, Ö±µ½µ½´ïÈë¿Ú²Å»áÍ£Ö¹
+                %ç”¨æ¥æ§åˆ¶æ‹“å±•æ­¥é•¿, ç›´åˆ°åˆ°è¾¾å…¥å£æ‰ä¼šåœæ­¢
                 break
             else
                 From_index = Node_added_index - 1;
@@ -570,15 +570,15 @@ for Iter_num = 1:Max_iter
      
 end
 
-Total_node = Node_added_index - 1;          %ÕÒµ½µÄ×Ü½ÚµãÊı
+Total_node = Node_added_index - 1;          %æ‰¾åˆ°çš„æ€»èŠ‚ç‚¹æ•°
 Result = [Iter_num, Node_added_index-1, Num_collision_test, Num_collision_points, Num_PCA_compute_1, Num_PCA_compute_2, toc];
-disp(['×Ü¹²½øĞĞÁË ' num2str(Iter_num) ' ´Îµü´ú£¬Éú³É ' num2str(Node_added_index-1) ' ¸ö½Úµã£¬»¨·Ñ ' num2str(toc) ' s']);
-disp(['×Ü¹²½øĞĞÁË ' num2str(Num_collision_test) ' ´ÎÅö×²¼ì²â£¬Éú³É ' num2str(Num_collision_points) ' ¸öÅö×²µã']);
-disp(['×Ü¹²½øĞĞÁË ' num2str(Num_PCA_compute_1) ' ´ÎµÚÒ»ÀàPCA·ÖÎö, ' num2str(Num_PCA_compute_2) ' ´ÎµÚ¶şÀàPCA·ÖÎö']);
-disp(['×Ü¹²»¨·ÑÁË ' num2str(toc) ' s']);
+disp(['æ€»å…±è¿›è¡Œäº† ' num2str(Iter_num) ' æ¬¡è¿­ä»£ï¼Œç”Ÿæˆ ' num2str(Node_added_index-1) ' ä¸ªèŠ‚ç‚¹ï¼ŒèŠ±è´¹ ' num2str(toc) ' s']);
+disp(['æ€»å…±è¿›è¡Œäº† ' num2str(Num_collision_test) ' æ¬¡ç¢°æ’æ£€æµ‹ï¼Œç”Ÿæˆ ' num2str(Num_collision_points) ' ä¸ªç¢°æ’ç‚¹']);
+disp(['æ€»å…±è¿›è¡Œäº† ' num2str(Num_PCA_compute_1) ' æ¬¡ç¬¬ä¸€ç±»PCAåˆ†æ, ' num2str(Num_PCA_compute_2) ' æ¬¡ç¬¬äºŒç±»PCAåˆ†æ']);
+disp(['æ€»å…±èŠ±è´¹äº† ' num2str(toc) ' s']);
  
-%Êä³ö½á¹û
-Solution = TreePlot(Tree, Total_node, Node_init, Node_goal, Success_num, Success, Robot_size, Obstacle, Weight);         %»­³öÊ÷
+%è¾“å‡ºç»“æœ
+Solution = TreePlot(Tree, Total_node, Node_init, Node_goal, Success_num, Success, Robot_size, Obstacle, Weight);         %ç”»å‡ºæ ‘
 
 
 % end
