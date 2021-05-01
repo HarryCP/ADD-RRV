@@ -47,14 +47,14 @@ Max_iter = 5*10^4;                      %最大迭代次数
 Step = 0.1;                             %机器人每一步步长
 Error_goal = 0.01;                      %允许误差
 
-P_sample = 0.3;                         %以目标点为采样点的概率 0.3
+P_sample = 0.3;                         %以目标点为采样点的概率 0.1
 P_belif = 0.60;                         %置信区间范围，再[0, 1]内选取
-P_bridge = 0.8;                         %利用PCA偏置桥测的概率 
+P_bridge = 0.8;                         %利用PCA偏置桥测的概率 0.5
 
 Radius = 5*Step;                        %搜索半径
 
 Num_obstacle_limit = 15;                %用于判断入口处的碰撞点是否足够丰富,10
-Num_near_sample = 400;                  %在接触构型附近随机采样的样本点数量
+Num_near_sample = 400;                  %在接触构型附近随机采样的样本点数量 200
 
 %%%%%%
 Num_collision_test = 0;                         %碰撞检测次数
