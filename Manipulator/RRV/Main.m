@@ -126,15 +126,15 @@ Step = 0.1;                                 %每步最小在拓展步长
 Error_goal = 0.01;                          %目标允许误差
 Dim = 6;                                    %构型空间维度
 
-P_sample = 0.3;                             %以目标点为采样点的概率 0.3
+P_sample = 0.3;                             %以目标点为采样点的概率 0.1
 P_belief = 0.60;                           	%置信区间范围，再[0, 1]内选取
-P_bridge = 0.8;                             %利用PCA偏置桥测的概率 
+P_bridge = 0.8;                             %利用PCA偏置桥测的概率 0.5
 
 Radius = 5*Step;                            %搜索半径
 
 Num_obstacle_limit = 150;                  	%用于判断入口处的碰撞点是否足够丰富,30
 Num_max_bridge_test = Num_obstacle_limit;	%最大桥测试次数
-Num_near_node = 500;                        %表示选择相邻的节点数
+Num_near_node = 500;                        %表示选择相邻的节点数  600
 
 Weight_1 = diag([1, 1, 1, 1, 1, 1]);        %用于构型空间度量的权重
 Weight_2 = diag([1, 1, 3]);              	%用于工作空间度量
